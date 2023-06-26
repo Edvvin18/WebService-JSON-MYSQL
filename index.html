@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="code.jquery.com_jquery-3.7.0.js"></script>
+    <script src="script.js"></script>
+    <title>Somativa 3 normal</title>
+</head>
+<body>
+    <div>
+        <h1>DESENVOLVER APLICACOES WEB COM JAVASCRIPT</h1>
+        <H2>SOMATIVA 3 DE - EDWIN MIRO ELEUTERIO BANDA - M21483 - TPW2</H2>
+        
+    </div>
+
+    <div>
+        <h3>RDA5: Manipular dados em XML usando jQuery</h3>
+        <h4>Aproveitamento pedagogico recuperados no ficheiro XML</h4>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nome do estudante</th>
+                    <th>Nome da disciplina</th>
+                    <th>Media final</th>
+                    <th>Resultado final</th>
+                </tr>
+            </thead>
+            <tbody id="corpoEscola">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h3>RDA6: Construir web services com jQuery</h3>
+        <h4>Obtendo informacoes do web services JSON e disponibilizando em HTML</h4>
+        <p>Relacao de beneficiarios de emprestimo com garantia salarial</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>NIB</th>
+                    <th>Nome do beneficiario</th>
+                    <th>Valor do emprestimo</th>
+                    <th>Data do inicio</th>
+                    <th>Data do fim</th>
+                    <th>Nome do banco</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody id="corpoEmprestimo">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<script>
+    linha1 = ""
+    $(function(){
+        $.get("json.php", function(data){
+            let dados = JSON.parse(data);
+            
+                linha1 += '<tr>'+
+                '<td>'+dados[nib]+'</td>'
+                '<td>'+dados[nome]+'</td>'
+                '<td>'+dados[valor]+'</td>'
+                '<td>'+dados[datainicial]+'</td>'
+                '<td>'+dados[datafinal]+'</td>'
+                '<td>'+dados[banco]+'</td>'
+                '<td>'+dados[estado]+'</td>'
+                '</tr>'
+            
+            $('#corpoEmprestimo').append(linha1)
+        
+        })
+    })
+</script>

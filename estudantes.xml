@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<estudante>
+
+    <codigo>1</codigo>
+
+    <nome>Edwin</nome>
+
+    <disciplina>Math</disciplina>
+
+    <as1>18</as1>
+    <as2>11</as2>
+    <as3>15</as3>
+
+
+    <ap>18</ap>
+
+    <trabalho_pratico>12</trabalho_pratico>
+
+</estudante>
+
